@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronFit - Спортивный зал</title>
+    <link rel="stylesheet" href="style_gl.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">IronFit Gym</a>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Поиск тренировок...">
+        <button class="search-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+
+    <a href="trainers.html" class="button" style="margin-left: 10px;">Тренеры</a>
+    <a href="schedule.html" class="button" style="margin-left: 10px;">Расписание</a>
+</header>
+
+
+<main>
+    <!-- Раздел "Наши тренеры" -->
+    <section style="padding: 40px; background-color: #f9f9f9; margin: 30px 0; border-radius: 15px;">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color); font-size: 32px;">Наши тренеры</h2>
+        <div class="catalog" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+            <div class="card trainer-card" style="aspect-ratio: unset; height: 380px; padding: 20px; display: flex; flex-direction: column;">
+                <div class="trainer-badge">ТОП-тренер</div>
+                <img src="/images/trainer1.png" alt="Максим Петров" style="width:100%; height:200px; object-fit:cover; border-radius: 10px; margin-bottom: 15px;">
+                <h3 style="margin: 10px 0; font-size: 22px;">Максим Петров</h3>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Специализация:</strong> Кроссфит, силовые</p>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Стаж:</strong> 8 лет</p>
+                <div style="margin-top: auto;">
+                </div>
+            </div>
+            <div class="card trainer-card" style="aspect-ratio: unset; height: 380px; padding: 20px; display: flex; flex-direction: column;">
+                <img src="/images/trainer2.png" alt="Анна Смирнова" style="width:100%; height:200px; object-fit:cover; border-radius: 10px; margin-bottom: 15px;">
+                <h3 style="margin: 10px 0; font-size: 22px;">Анна Смирнова</h3>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Специализация:</strong> Йога, пилатес</p>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Стаж:</strong> 5 лет</p>
+                <div style="margin-top: auto;">
+                </div>
+            </div>
+            <div class="card trainer-card" style="aspect-ratio: unset; height: 380px; padding: 20px; display: flex; flex-direction: column;">
+                <div class="trainer-badge">Эксперт</div>
+                <img src="/images/trainer3.png" alt="Иван Козлов" style="width:100%; height:200px; object-fit:cover; border-radius: 10px; margin-bottom: 15px;">
+                <h3 style="margin: 10px 0; font-size: 22px;">Иван Козлов</h3>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Специализация:</strong> Бокс, MMA</p>
+                <p style="margin: 5px 0; font-size: 16px; color: var(--text-light);"><strong>Стаж:</strong> 10 лет</p>
+                <div style="margin-top: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел "Расписание" -->
+    <section style="padding: 40px 20px; margin: 30px 0;">
+        <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Расписание занятий</h2>
+        <div class="catalog">
+            <div class="card schedule-day">
+                <h3>Понедельник</h3>
+                <ul style="padding-left: 20px;">
+                    <li>07:00 - Функциональный тренинг</li>
+                    <li>09:00 - Йога</li>
+                    <li>18:00 - Бокс</li>
+                    <li>19:30 - Кроссфит</li>
+                </ul>
+            </div>
+            <div class="card schedule-day">
+                <h3>Среда</h3>
+                <ul style="padding-left: 20px;">
+                    <li>07:00 - Кардио-зона</li>
+                    <li>09:00 - Пилатес</li>
+                    <li>18:00 - Силовая</li>
+                    <li>19:30 - TRX</li>
+                </ul>
+            </div>
+            <div class="card schedule-day">
+                <h3>Пятница</h3>
+                <ul style="padding-left: 20px;">
+                    <li>07:00 - Интервальные</li>
+                    <li>09:00 - Стретчинг</li>
+                    <li>18:00 - Бокс</li>
+                    <li>19:30 - Фитнес-марафон</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <h2>Форма обратной связи</h2>
+    <form id="feedbackForm">
+        <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required placeholder="Асырбек Менглибаев">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="test@mail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required placeholder="Ваше сообщение..."></textarea>
+        </div>
+
+        <button type="submit">Отправить сообщение</button>
+    </form>
+    <p id = "responseMessage"></p>
+    </div>
+    <script src = /script.js> </script>
+
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <h2>Спасибо, что обратились к нам!</h2>
+            <p>✅ Ваше сообщение успешно отправлено</p>
+            <p>Мы рассмотрим ваше обращение</p>
+            <button id="closeModal">Понятно</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('thankYouModal').style.display = 'none';
+        const form = document.getElementById('feedbackForm');
+        const modal = document.getElementById('thankYouModal');
+        const closeBtn = document.getElementById('closeModal');
+
+        form.addEventListener('submit', function(event) {
+            // Сохраняем позицию скролла перед отправкой
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            event.preventDefault();
+
+            // Показываем модальное окно
+            modal.classList.add('show');
+            document.body.classList.add('blur');
+        });
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('thankYouModal').style.display = 'block';
+            this.reset();
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('thankYouModal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('thankYouModal')) {
+                document.getElementById('thankYouModal').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
